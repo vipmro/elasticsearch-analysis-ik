@@ -155,13 +155,13 @@ class LetterSegmenter implements ISegmenter {
 		}
 		
 		//判断缓冲区是否已经读完
-		if(context.isBufferConsumed() && (this.start != -1 && this.end != -1)){
-            //缓冲以读完，输出词元
-            Lexeme newLexeme = new Lexeme(context.getBufferOffset() , this.start , this.end - this.start + 1 , Lexeme.TYPE_LETTER);
-            context.addLexeme(newLexeme);
-            this.start = -1;
-            this.end = -1;
-		}
+//		if(context.isBufferConsumed() && (this.start != -1 && this.end != -1)){
+//            //缓冲以读完，输出词元
+//            Lexeme newLexeme = new Lexeme(context.getBufferOffset() , this.start , this.end - this.start + 1 , Lexeme.TYPE_LETTER);
+//            context.addLexeme(newLexeme);
+//            this.start = -1;
+//            this.end = -1;
+//		}
 		
 		//判断是否锁定缓冲区
 		if(this.start == -1 && this.end == -1){
